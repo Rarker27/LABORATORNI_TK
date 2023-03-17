@@ -1,0 +1,463 @@
+Microsoft Windows [Version 10.0.19044.2728]
+(c) Корпорація Майкрософт. Усі права захищені.
+
+C:\Users\kasy2>docker
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default
+                           "C:\\Users\\kasy2\\.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "C:\\Users\\kasy2\\.docker\\ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "C:\\Users\\kasy2\\.docker\\cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "C:\\Users\\kasy2\\.docker\\key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.10.3)
+  compose*    Docker Compose (Docker Inc., v2.15.1)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  dev*        Docker Dev Environments (Docker Inc., v0.1.0)
+  extension*  Manages Docker extensions (Docker Inc., v0.2.18)
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+  scan*       Docker Scan (Docker Inc., v0.25.0)
+  scout*      Command line tool for Docker Scout (Docker Inc., v0.6.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+
+C:\Users\kasy2>docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete
+Digest: sha256:ffb13da98453e0f04d33a6eee5bb8e46ee50d08ebe17735fc0779d0349e889e9
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+
+C:\Users\kasy2>docker pull hello-world
+Using default tag: latest
+latest: Pulling from library/hello-world
+Digest: sha256:ffb13da98453e0f04d33a6eee5bb8e46ee50d08ebe17735fc0779d0349e889e9
+Status: Image is up to date for hello-world:latest
+docker.io/library/hello-world:latest
+
+C:\Users\kasy2>docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+
+C:\Users\kasy2>docker pull ellerbrock/alpine-bash-git
+Using default tag: latest
+latest: Pulling from ellerbrock/alpine-bash-git
+c87736221ed0: Pull complete
+eadf65686d00: Pull complete
+Digest: sha256:46262050f227c4515a501607873d760961ee32d92fa5b8cf9c89aca3c564d008
+Status: Downloaded newer image for ellerbrock/alpine-bash-git:latest
+docker.io/ellerbrock/alpine-bash-git:latest
+
+C:\Users\kasy2>docker run -it ellerbrock/alpine-bash-git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+C:\Users\kasy2>whoami
+desktop-74l97vs\kasy2
+
+C:\Users\kasy2>age:  docker [OPTIONS] COMMAND
+'age:' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>
+C:\Users\kasy2>A self-sufficient runtime for containers
+'A' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>
+C:\Users\kasy2>Options:
+'Options:' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>      --config string      Location of client config files (default
+'--config' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>                           "C:\\Users\\kasy2\\.docker")
+'"C:\\Users\\kasy2\\.docker")' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  -c, --context string     Name of the context to use to connect to the
+'-c' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>                           daemon (overrides DOCKER_HOST env var and
+'daemon' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>                           default context set with "docker context use")
+'default' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  -D, --debug              Enable debug mode
+'-D' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  -H, --host list          Daemon socket(s) to connect to
+'-H' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  -l, --log-level string   Set the logging level
+'-l' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>                           ("debug"|"info"|"warn"|"error"|"fatal")
+'"debug"' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>                           (default "info")
+'default' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>      --tls                Use TLS; implied by --tlsverify
+'--tls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>      --tlscacert string   Trust certs signed only by this CA (default
+'--tlscacert' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>                           "C:\\Users\\kasy2\\.docker\\ca.pem")
+'"C:\\Users\\kasy2\\.docker\\ca.pem")' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>      --tlscert string     Path to TLS certificate file (default
+'--tlscert' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>                           "C:\\Users\\kasy2\\.docker\\cert.pem")
+'"C:\\Users\\kasy2\\.docker\\cert.pem")' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>      --tlskey string      Path to TLS key file (default
+'--tlskey' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>                           "C:\\Users\\kasy2\\.docker\\key.pem")
+'"C:\\Users\\kasy2\\.docker\\key.pem")' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>      --tlsverify          Use TLS and verify the remote
+'--tlsverify' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  -v, --version            Print version information and quit
+'-v' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>
+C:\Users\kasy2>Management Commands:
+'Management' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  builder     Manage builds
+'builder' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  buildx*     Docker Buildx (Docker Inc., v0.10.3)
+'buildx*' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  compose*    Docker Compose (Docker Inc., v2.15.1)
+'compose*' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  config      Manage Docker configs
+'config' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  container   Manage containers
+'container' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  context     Manage contexts
+'context' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  dev*        Docker Dev Environments (Docker Inc., v0.1.0)
+'dev*' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  extension*  Manages Docker extensions (Docker Inc., v0.2.18)
+'extension*' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  image       Manage images
+'image' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  manifest    Manage Docker image manifests and manifest lists
+'manifest' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  network     Manage networks
+'network' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  node        Manage Swarm nodes
+'node' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  plugin      Manage plugins
+'plugin' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+'sbom*' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  scan*       Docker Scan (Docker Inc., v0.25.0)
+'scan*' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  scout*      Command line tool for Docker Scout (Docker Inc., v0.6.0)
+'scout*' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  secret      Manage Docker secrets
+'secret' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  service     Manage services
+'service' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  stack       Manage Docker stacks
+'stack' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  swarm       Manage Swarm
+'swarm' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  system      Manage Docker
+'system' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  trust       Manage trust on Docker images
+'trust' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  volume      Manage volumes
+'volume' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>
+C:\Users\kasy2>Commands:
+'Commands:' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  attach      Attach local standard input, output, and error streams to a running container
+'attach' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  build       Build an image from a Dockerfile
+'build' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  commit      Create a new image from a container's changes
+'commit' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  cp          Copy files/folders between a container and the local filesystem
+'cp' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  create      Create a new container
+'create' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  diff        Inspect changes to files or directories on a container's filesystem
+'diff' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  events      Get real time events from the server
+'events' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  exec        Run a command in a running container
+'exec' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  export      Export a container's filesystem as a tar archive
+'export' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  history     Show the history of an image
+'history' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  images      List images
+'images' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  import      Import the contents from a tarball to create a filesystem image
+'import' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  info        Display system-wide information
+'info' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kasy2>  inspect     Return low-level information on Docker objects
+CompileCommand: exclude com/intellij/openapi/vfs/impl/FilePartNodeRoot.trieDescend bool exclude = true
